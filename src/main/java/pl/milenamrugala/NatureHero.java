@@ -21,6 +21,7 @@ public class NatureHero {
             String answer = scanner.nextLine();
             if (answer.equals(map.get(string))) {
                 correctAnswer++;
+                System.out.println("Correct!");
             } else {
                 System.out.println(String.join(" ", "Wrong answer." +
                         " The correct color of the bin for", string, "is", map.get(string)));
@@ -29,6 +30,34 @@ public class NatureHero {
 
         int totalQuestions = map.size();
         System.out.println(String.format("Number of correct answers: %d/%d", correctAnswer, totalQuestions));
+
+
+        switch (correctAnswer) {
+            case 30:
+            case 29:
+            case 28:
+            case 27:
+            case 26:
+            case 25:
+                System.out.println("Congratulations, you are a Nature Hero!");
+                break;
+            case 24:
+            case 23:
+            case 22:
+            case 21:
+            case 20:
+                System.out.println("Well done, you are a Nature Friend!");
+                break;
+            case 19:
+            case 18:
+            case 17:
+            case 16:
+            case 15:
+                System.out.println("Good job, you are a Nature Supporter!");
+                break;
+            default:
+                System.out.println("Thanks for playing!");
+        }
     }
 
 
@@ -64,6 +93,7 @@ public class NatureHero {
         map.put("glass jars", "green");
         map.put("plastic containers for yogurt", "yellow");
         map.put("diapers", "black");
+        map.put("aerosol cans", "yellow");
 
         return map;
     }
