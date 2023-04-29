@@ -4,3 +4,4 @@ The items are shuffled randomly, and the user is prompted to enter the correct b
  If the user's answer matches the correct color, their score increases by one. 
  Otherwise, the correct answer is displayed, and the user's score remains unchanged.
  At the end of the quiz, the user's score is displayed as a fraction of the total number of questions.
+** The quiz is an idea for my main NatureHero project. 
