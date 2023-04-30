@@ -8,15 +8,19 @@ import java.util.*;
 public class NatureHero {
 
     public static void main(String[] args) {
+
         int correctAnswer = 0;
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Hello! What is your name?");
+        String name = scanner.nextLine();
+
         Map<String, String> map = getMapFromFile("src/main/bin-colors.txt");
 
         List<String> items = new ArrayList<>(map.keySet());
         Collections.shuffle(items);
 
-        System.out.println("Welcome to the Nature Hero quiz game!");
+        System.out.println("Welcome to the Nature Hero quiz game, " + name + "!");
         System.out.println("Identify the correct bin color for each waste type:");
         System.out.println("- blue: paper\n- green: glass\n- brown: bio waste\n-" +
                 " yellow: metal and plastic\n- black: mixed or non-recyclable waste\nLet's get started!\n");
@@ -37,16 +41,16 @@ public class NatureHero {
         System.out.println(String.format("You got %d out of %d answers correct.", correctAnswer, totalQuestions));
 
         if (correctAnswer >= 25) {
-            System.out.println("Congratulations, you're a Nature Hero!");
+            System.out.println("Congratulations, you're a Nature Hero, " + name + "!");
         } else if (correctAnswer >= 20) {
-            System.out.println("Well done, you're a Nature Friend!");
+            System.out.println("Well done, you're a Nature Friend, " + name + "!");
         } else if (correctAnswer >= 15) {
-            System.out.println("Good job, you're a Nature Supporter!");
+            System.out.println("Good job, you're a Nature Supporter, " + name + "!");
         } else {
-            System.out.println("Thanks for playing!");
+            System.out.println("Thanks for playing, " + name + "!");
         }
 
-        // adding new item
+        // adding new item and bin color
         while (true) {
             System.out.println("Would you like to add a new waste type to the quiz game? (y/n)");
             String input = scanner.nextLine();
@@ -54,13 +58,13 @@ public class NatureHero {
                 System.out.println("Enter the name of the new waste type:");
                 String newItem = scanner.nextLine();
                 if (newItem.equalsIgnoreCase("n")) {
-                    System.out.println("See you later!");
+                    System.out.println("See you later, " + name + "!");
                     break;
                 }
                 System.out.println("Enter the correct bin color for the new waste type:");
                 String newBinColor = scanner.nextLine();
                 if (newBinColor.equalsIgnoreCase("n")) {
-                    System.out.println("See you later!");
+                    System.out.println("See you later, " + name + "!");
                     break;
                 }
                 try {
@@ -72,7 +76,7 @@ public class NatureHero {
                     System.err.println("Error writing to file: " + e.getMessage());
                 }
             } else if (input.equalsIgnoreCase("n")) {
-                System.out.println("See you later!");
+                System.out.println("See you later, " + name + "!");
                 break;
             }
         }
