@@ -1,6 +1,7 @@
 package pl.milenamrugala.naturehero;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
@@ -43,6 +44,37 @@ public class NatureHero {
             System.out.println("Good job, you're a Nature Supporter!");
         } else {
             System.out.println("Thanks for playing!");
+        }
+
+        // adding new item
+        while (true) {
+            System.out.println("Would you like to add a new waste type to the quiz game? (y/n)");
+            String input = scanner.nextLine();
+            if (input.equalsIgnoreCase("y")) {
+                System.out.println("Enter the name of the new waste type:");
+                String newItem = scanner.nextLine();
+                if (newItem.equalsIgnoreCase("n")) {
+                    System.out.println("See you later!");
+                    break;
+                }
+                System.out.println("Enter the correct bin color for the new waste type:");
+                String newBinColor = scanner.nextLine();
+                if (newBinColor.equalsIgnoreCase("n")) {
+                    System.out.println("See you later!");
+                    break;
+                }
+                try {
+                    FileWriter writer = new FileWriter("src/main/bin-colors.txt", true);
+                    writer.write("\n" + newItem + ":" + newBinColor);
+                    writer.close();
+                    System.out.println("The new waste type has been added to the quiz game.");
+                } catch (IOException e) {
+                    System.err.println("Error writing to file: " + e.getMessage());
+                }
+            } else if (input.equalsIgnoreCase("n")) {
+                System.out.println("See you later!");
+                break;
+            }
         }
     }
 

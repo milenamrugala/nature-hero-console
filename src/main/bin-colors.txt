@@ -28,3 +28,4 @@ glass jars:green
 plastic containers for yogurt:yellow
 diapers:black
 aerosol cans:yellow
+receipt:black
