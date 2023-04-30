@@ -10,4 +10,4 @@ To use the program, simply run the NatureHero.java file in your preferred Java d
 The program will prompt you to enter the correct bin color for each item.
  
  
-** The quiz is an idea for my main NatureHero project. 
+** This simple quiz game is one of the ideas that I collect for my main NatureHero project in Spring Boot.
