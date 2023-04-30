@@ -1,0 +1,30 @@
+printer paper:blue
+wine bottles:green
+coffee grounds:brown
+beer cans:yellow
+meat:black
+eggshells:brown
+pickle jars:green
+notepads:blue
+grass clippings:brown
+broken mirror:black
+envelops:blue
+aluminum foil:yellow
+heat-resistant glass:black
+vegetable scraps:brown
+postcards:blue
+flyers:blue
+bones:black
+tea bags:brown
+jam jars:green
+plastic water bottles:yellow
+olive oil bottles:green
+magazines:blue
+brochures:blue
+fish bones:black
+fruit scraps:brown
+leaves:brown
+glass jars:green
+plastic containers for yogurt:yellow
+diapers:black
+aerosol cans:yellow
