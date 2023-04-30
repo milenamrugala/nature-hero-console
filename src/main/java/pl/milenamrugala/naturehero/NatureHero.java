@@ -1,6 +1,5 @@
 package pl.milenamrugala.naturehero;
 
-
 import java.io.File;
 import java.io.IOException;
 import java.util.*;
@@ -16,32 +15,25 @@ public class NatureHero {
         List<String> items = new ArrayList<>(map.keySet());
         Collections.shuffle(items);
 
-        System.out.println("Welcome to the Nature Hero game! ");
-        System.out.println("In this game, you will be shown a series of items," +
-                " and you have to correctly identify the color of the bin in" +
-                " which they should be placed for recycling. ");
-        System.out.println("Here are the different colors and what types of waste they represent:");
-        System.out.println("   - blue: paper");
-        System.out.println("   - green: glass");
-        System.out.println("   - brown: bio waste");
-        System.out.println("   - yellow: metal and plastic");
-        System.out.println("   - black: mixed or non-recyclable waste");
-        System.out.println("Let's get started!\n");
+        System.out.println("Welcome to the Nature Hero quiz game!");
+        System.out.println("Identify the correct bin color for each waste type:");
+        System.out.println("- blue: paper\n- green: glass\n- brown: bio waste\n-" +
+                " yellow: metal and plastic\n- black: mixed or non-recyclable waste\nLet's get started!\n");
 
         for (String item : items) {
-            System.out.println(String.format("Provide the correct color of the bin in which you should place \"%s\":", item));
+            System.out.println(String.format("Provide the correct bin color for \"%s\":", item));
             String answer = scanner.nextLine();
 
             if (answer.equalsIgnoreCase(map.get(item))) {
                 correctAnswer++;
                 System.out.println("Correct!");
             } else {
-                System.out.println(String.format("Sorry, the correct color for \"%s\" is %s.", item, map.get(item)));
+                System.out.println(String.format("Sorry, the correct bin color for \"%s\" is %s.", item, map.get(item)));
             }
         }
 
         int totalQuestions = map.size();
-        System.out.println(String.format("You got %d out of %d correct.", correctAnswer, totalQuestions));
+        System.out.println(String.format("You got %d out of %d answers correct.", correctAnswer, totalQuestions));
 
         if (correctAnswer >= 25) {
             System.out.println("Congratulations, you're a Nature Hero!");
