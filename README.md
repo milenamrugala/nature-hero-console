@@ -5,8 +5,8 @@ If the user's answer matches the correct color, their score increases by one.
 Otherwise, the correct answer is displayed, and the user's score remains unchanged.
 At the end of the quiz, the user's score is displayed as a fraction of the total number of questions.
 After the game ends, the player will have the option to provide feedback on the game by answering "y" or "n" to a prompt.
-If the player chooses to provide feedback, they can type their feedback, which will be saved to a file called "nature-hero-feedback.txt". 
-If the player chooses not to provide feedback, the game will end.
+If the user chooses to provide feedback, they can type their feedback, which will be saved to a file called "nature-hero-feedback.txt". 
+If the user chooses not to provide feedback, the game will end.
  
  
 To use the program, simply run the NatureHero.java file in your preferred Java development environment.
