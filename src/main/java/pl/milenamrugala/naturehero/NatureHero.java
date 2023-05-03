@@ -15,7 +15,7 @@ public class NatureHero {
         System.out.println("Hello! What is your name?");
         String name = scanner.nextLine();
 
-        Map<String, String> map = getMapFromFile("src/main/bin-colors.txt");
+        Map<String, String> map = getMapFromFile("bin-colors.txt");
 
         List<String> items = new ArrayList<>(map.keySet());
         Collections.shuffle(items);
@@ -50,34 +50,27 @@ public class NatureHero {
             System.out.println("Thanks for playing, " + name + "!");
         }
 
-        // adding new item and bin color
-        while (true) {
-            System.out.println("Would you like to add a new waste type to the quiz game? (y/n)");
-            String input = scanner.nextLine();
-            if (input.equalsIgnoreCase("y")) {
-                System.out.println("Enter the name of the new waste type:");
-                String newItem = scanner.nextLine();
-                if (newItem.equalsIgnoreCase("n")) {
-                    System.out.println("See you later, " + name + "!");
-                    break;
-                }
-                System.out.println("Enter the correct bin color for the new waste type:");
-                String newBinColor = scanner.nextLine();
-                if (newBinColor.equalsIgnoreCase("n")) {
-                    System.out.println("See you later, " + name + "!");
-                    break;
-                }
+        boolean validInput = false;
+        while (!validInput) {
+            System.out.println("Do you have any feedback for the Nature Hero quiz game? (y/n)");
+            String feedbackInput = scanner.nextLine();
+            if (feedbackInput.equalsIgnoreCase("y")) {
+                System.out.println("Please provide your feedback:");
+                String feedback = scanner.nextLine();
                 try {
-                    FileWriter writer = new FileWriter("src/main/bin-colors.txt", true);
-                    writer.write("\n" + newItem + ":" + newBinColor);
+                    FileWriter writer = new FileWriter("nature-hero-feedback.txt", true);
+                    writer.write("\n" + feedback);
                     writer.close();
-                    System.out.println("The new waste type has been added to the quiz game.");
+                    System.out.println("Thank you for your feedback, " + name + "!");
+                    validInput = true;
                 } catch (IOException e) {
                     System.err.println("Error writing to file: " + e.getMessage());
                 }
-            } else if (input.equalsIgnoreCase("n")) {
-                System.out.println("See you later, " + name + "!");
-                break;
+            } else if (feedbackInput.equalsIgnoreCase("n")) {
+                System.out.println("Thank you for playing the Nature Hero quiz game, " + name + "!");
+                validInput = true;
+            } else {
+                System.out.println("Invalid input. Please enter 'y' or 'n'.");
             }
         }
     }
