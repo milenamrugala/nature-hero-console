@@ -1,5 +1,5 @@
 The NatureHero program (console version) is a simple quiz game that helps users learn how to sort waste. 
-The program uses txt file to store a list of items and their corresponding correct bin colors. 
+The program uses bin-colors.txt file to store a list of items and their corresponding correct bin colors. 
 The items are shuffled randomly, and the user is prompted to enter the correct bin color for each item. 
 If the user's answer matches the correct color, their score increases by one. 
 Otherwise, the correct answer is displayed, and the user's score remains unchanged.
