@@ -19,10 +19,6 @@ Console:
 
 <img width="499" alt="start" src="https://user-images.githubusercontent.com/123079896/236648307-79a00d65-7355-4a51-b268-5953bde35bbf.png">
 
-Answers:
-
-<img width="1470" alt="answers" src="https://user-images.githubusercontent.com/123079896/236648322-126519d7-a180-47bb-96a7-8bd5f843d0a4.png">
-
 Result:
 
 <img width="525" alt="result" src="https://user-images.githubusercontent.com/123079896/236648338-a5a56a72-15d8-4f3c-bb29-0b37668ef89c.png">
