@@ -10,6 +10,7 @@ grass clippings:brown
 broken mirror:black
 envelops:blue
 aluminum foil:yellow
+plastic bags:yellow
 heat-resistant glass:black
 vegetable scraps:brown
 postcards:blue
@@ -29,3 +30,7 @@ plastic containers for yogurt:yellow
 diapers:black
 aerosol cans:yellow
 receipt:black
+wet paper:black
+coffee grounds:brown
+ceramics:black
+porcelain:black
