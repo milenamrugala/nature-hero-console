@@ -31,6 +31,7 @@ diapers:black
 aerosol cans:yellow
 receipt:black
 wet paper:black
+clean paper:blue
 coffee grounds:brown
 ceramics:black
 porcelain:black
